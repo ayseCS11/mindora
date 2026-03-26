@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindora AI - Help & Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F0F4F8; /* soft calm background */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #4B7BEC; /* Mindora primary */
+      color: #fff;
+      padding: 28px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    .section {
+      background-color: #fff;
+      margin-bottom: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 16px 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #4B7BEC;
+      font-weight: 600;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      padding-right: 24px;
+    }
+
+    h3::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+
+    h3.active::after {
+      content: '-';
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      margin-top: 8px;
+    }
+
+    .faq-answer p {
+      margin: 0 0 12px 0;
+    }
+
+    a {
+      color: #4B7BEC;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .contact-card {
+      background-color: #E6F0FF;
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .contact-card a {
+      font-weight: 600;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .tip {
+      background-color: #FFF4E6;
+      padding: 12px 16px;
+      border-radius: 12px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mindora AI - Help & Support</h1>
+</header>
+
+<main>
+
+  <section class="section">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+      <h3>How do I log in?</h3>
+      <div class="faq-answer">
+        <p>Open the Mindora AI app and use your registered email and password to sign in. You can also use the "Continue with Google" option.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>How can I reset my password?</h3>
+      <div class="faq-answer">
+        <p>Tap "Forgot password?" on the Sign In screen and follow the instructions sent to your email. Make sure to check your spam folder if you don't see it.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I use the mental wellness exercises?</h3>
+      <div class="faq-answer">
+        <p>After signing in, start a session in the app and Mindora will guide you through exercises based on your mood and recent activity.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is Mindora a therapist?</h3>
+      <div class="faq-answer">
+        <p>No, Mindora is a supportive AI companion. It provides guidance based on mental wellness principles but does not replace professional therapy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Contact Support</h2>
+    <div class="contact-card">
+      <p>If you need help or have questions, contact us:</p>
+      <a href="mailto:mindora.ai@outlook.com?subject=Mindora%20Support%20Request"></a>
+      <p>We aim to respond within 24 hours.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://aysecs11.github.io/mindora/privacy-policy.html" target="_blank">Privacy Policy</a></li>
+      <li><a href="https://aysecs11.github.io/mindora/terms.html" target="_blank">Terms & Conditions</a></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Tips for Your Wellness</h2>
+    <div class="tip">
+      <p>Log your mood daily for better guidance.</p>
+      <p>Try short mindfulness exercises during breaks.</p>
+      <p>Remember, Mindora is a companion, not a therapist. Seek professional help for medical or mental health issues.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Immediate Support</h2>
+    <div class="contact-card" style="background-color: #FFD6D6;">
+      <p>If you feel in crisis or unsafe, reach out immediately:</p>
+      <p>US: Call or text 988<br>
+      Text HOME to 741741 (Crisis Text Line)<br>
+      Pakistan: Umang helpline 0317-4288665</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Mindora AI. All rights reserved.
+</footer>
+
+<script>
+  // Collapsible FAQ
+  const faqItems = document.querySelectorAll('.faq-item h3');
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+      const answer = item.nextElementSibling;
+      if (item.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      } else {
+        answer.style.maxHeight = 0;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
